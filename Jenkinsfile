@@ -14,21 +14,21 @@ pipeline {
         }
         stage('Clean') {
             steps {
-                dir("${env.WORKSPACE}"){
+                dir("${env.WORKSPACE}/maven_project/test"){
                     sh 'mvn clean'
                 }
             }
         }
         stage('Test') {
             steps {
-                dir("${env.WORKSPACE}"){
+                dir("${env.WORKSPACE}/maven_project/test"){
                     sh 'mvn test'
                 }
             }
         }
         stage('Package') {
             steps {
-                dir("${env.WORKSPACE}"){
+                dir("${env.WORKSPACE}/maven_project/test"){
                     sh 'mvn package -DskipTests'
                 }
             }
