@@ -9,7 +9,7 @@ pipeline {
                 sh 'mvn --version'
                 sh 'git --version'
                 git branch: 'main',
-                    url: 'https://github.com/LinkedInLearning/essential-jenkins-2468076.git'
+                    url: 'https://github.com/Pathak-Akshay/jenkins_add_ssh_node1.git'
             }
         }
         stage('Clean') {
